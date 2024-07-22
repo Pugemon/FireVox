@@ -1,7 +1,7 @@
 # Directories
 .idea
-./build
-./external/*
+/build/
+/external/
 
 # Prerequisites
 *.d
