@@ -9,7 +9,10 @@ FetchContent_Declare(
         GIT_REPOSITORY https://github.com/gabime/spdlog.git
         GIT_TAG v1.14.1
 )
-FetchContent_MakeAvailable(spdlog)
+FetchContent_GetProperties(spdlog)
+if(NOT spdlog_POPULATED)
+  FetchContent_MakeAvailable(spdlog)
+endif()
 message(STATUS "spdlog has been downloaded to ${spdlog_SOURCE_DIR}")
 
 target_link_libraries(${PROJECT_NAME} PRIVATE spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32>)
