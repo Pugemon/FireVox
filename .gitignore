@@ -1,7 +1,7 @@
 # Directories
 .idea
-build
-external
+./build
+./external/*
 
 # Prerequisites
 *.d
@@ -35,3 +35,4 @@ external
 *.exe
 *.out
 *.app
+*.elf
